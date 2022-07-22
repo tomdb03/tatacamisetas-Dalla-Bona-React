@@ -1,7 +1,7 @@
 const CartWidget = () => {
     return (
-        <div>
-            <img src='images/cart.svg' alt='CartWidget'/>
+        <div className = 'cartcon'>
+            <img src='images/cart.svg' alt='CartWidget' className='CartWidget'/>
         </div>
     )
 }

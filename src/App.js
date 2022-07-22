@@ -2,6 +2,7 @@ import './scss/style.scss'
 import Navbar from './components/Navbar';
 // import Counter from './Counter';
 import ItemListContainer from './components/ItemListContainer';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
     <div className="App">
       <Navbar />
       {/* <Counter /> */}
-      <ItemListContainer greeting='Hola comision 34695'/>
+      <ItemListContainer greeting='Acá iría el catálogo'/>
     </div>
   );
 }

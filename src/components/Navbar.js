@@ -1,27 +1,57 @@
-import Button from './Button'
+// import Button from './Button'
 import CartWidget from './CartWidget'
 
-const Navbar = () => {
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
-    const text = 'hice click'
 
-    const handleClick = () => {
-        console.log(text)
-    }
+function CollapsibleExample() {
+    
     return (
-        <nav className="Navbar">
-            <div>
-                <h1>Tata Camisetas</h1>
-            </div>
-            <div>
-                <Button handleClick={handleClick} color='red'>Camisetas</Button>
-                <Button color='blue'>Shorts</Button>
-                <Button color='green'>Buzos</Button>
-                <Button color='purple'>Joggins</Button>
-            </div>
-            <CartWidget />
-        </nav>
-    )
+        <Navbar collapseOnSelect expand="lg" bg="info" variant="info">
+            <Container>
+                <Navbar.Brand href="#camisetas"><h1>Tata Camisetas</h1></Navbar.Brand>
+                {/* <Navbar.Brand href="#camisetas"><img src=".../public/images/logotatacamisetas.png" alt="logo" /></Navbar.Brand> */}
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="#camisetas">Camisetas</Nav.Link>
+                        <Nav.Link href="#shorts">Shorts</Nav.Link>
+                        <Nav.Link href="#buzos">Buzos</Nav.Link>
+                        <Nav.Link href="#joggins">Joggins</Nav.Link>
+                    </Nav>
+                    <Nav>
+                        <Nav.Link href="#cart" className="mx-auto"><CartWidget /></Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    );
 }
 
-export default Navbar
+export default CollapsibleExample;
+
+
+// const Navbar = () => {
+
+//     const text = 'hice click'
+
+//     const handleClick = () => {
+//         console.log(text)
+//     }
+//     return (
+//         <nav className="Navbar">
+//             <div>
+//                 <h1>Tata Camisetas</h1>
+//             </div>
+//             <div>
+//                 <Button handleClick={handleClick} color='red'>Camisetas</Button>
+//                 <Button color='blue'>Shorts</Button>
+//                 <Button color='green'>Buzos</Button>
+//                 <Button color='purple'>Joggins</Button>
+//             </div>
+//             <CartWidget />
+//         </nav>
+//     )
+// }
+
+// export default Navbar

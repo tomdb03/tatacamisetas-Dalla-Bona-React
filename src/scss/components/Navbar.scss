@@ -1,6 +1,8 @@
 .Navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: navy;
+    background-color: lightblue;
+    top: 0;
+    width: 100%;
+    padding: 12px;
+    position: sticky;
+    z-index: 1;
 }
