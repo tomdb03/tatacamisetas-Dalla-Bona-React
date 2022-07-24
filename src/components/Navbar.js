@@ -1,16 +1,15 @@
+import { Container, Nav, Navbar } from 'react-bootstrap';
+
 // import Button from './Button'
 import CartWidget from './CartWidget'
-
-import { Container, Nav, Navbar } from 'react-bootstrap';
 
 
 function CollapsibleExample() {
     
     return (
-        <Navbar collapseOnSelect expand="lg" bg="info" variant="info">
+        <Navbar collapseOnSelect expand="lg" className='nb'>
             <Container>
-                <Navbar.Brand href="#camisetas"><h1>Tata Camisetas</h1></Navbar.Brand>
-                {/* <Navbar.Brand href="#camisetas"><img src=".../public/images/logotatacamisetas.png" alt="logo" /></Navbar.Brand> */}
+                <Navbar.Brand href="#camisetas"><img className='logo' src='images/logotatacamisetas.png' alt="logo" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">

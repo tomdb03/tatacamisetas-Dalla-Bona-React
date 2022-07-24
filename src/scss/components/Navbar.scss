@@ -1,8 +1,16 @@
-.Navbar {
-    background-color: lightblue;
+.nb {
+    background-color: #12acc7;
     top: 0;
     width: 100%;
-    padding: 12px;
     position: sticky;
     z-index: 1;
+}
+
+.logo {
+    height: 71px;
+    width: 207px;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }

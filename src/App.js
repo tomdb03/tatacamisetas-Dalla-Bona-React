@@ -1,8 +1,7 @@
 import './scss/style.scss'
 import Navbar from './components/Navbar';
-// import Counter from './Counter';
+// import Counter from './components/Counter';
 import ItemListContainer from './components/ItemListContainer';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
