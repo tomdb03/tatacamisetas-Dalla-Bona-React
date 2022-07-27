@@ -1,17 +1,33 @@
 .counter {
 
+    margin: 30px auto 30px auto;
+    @extend %contenedorNegro;
+    width: 70%;
+
+    .counterValue{
+        color: $colorPrimario;
+        font-size: 33px;
+    }
+
     .contadorBotones {
-        @include flex(space-evenly, center);
+        @include flex(center, center);
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 80%;
+        width: 100%;
         margin: 0 auto 0 auto;
 
         .contadorBoton {
             height: 40px;
-            margin: 10px 0 10px 0;
-            width: 35%;
+            margin: 3px 0 0 0;
+            width: 20%;
             @extend %botones;
         }
+    }
+    .contadorBoton {
+        height: 40px;
+        margin: 10px 0 10px 0;
+        width: 40%;
+        @extend %botones;
+        font-weight: bolder;
     }
 }

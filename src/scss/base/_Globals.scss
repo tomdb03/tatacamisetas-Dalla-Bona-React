@@ -18,9 +18,10 @@ $boxShadowBlanca: 0px 1px 4px $colorBlanco;
     list-style: none;
 }
 
-body {
+.App {
+    text-align: center;
     font-family: 'Roboto', sans-serif;
-    // background-color: $colorPrimario;
     line-height: inherit;
     color: inherit;
-}
+    // background-color: ;
+  }
