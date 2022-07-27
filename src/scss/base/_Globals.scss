@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+$colorPrimario: #33abb1;        /* no lo uso */
+$colorBlanco: #e5e5e5;
+$colorNegroHF: #141414;
+$colorNegro: #000;
+$colorGris: rgb(109, 109, 110);
+
+$boxShadowClara: 1px 1px 3px 2px $colorNegroHF;
+$boxShadowOscura: 0px 10px 10px rgba(0, 0, 0, 0.8);
+$boxShadowBlanca: 0px 1px 4px $colorBlanco;
+
 * {
     margin: 0;
     padding: 0;

@@ -1,0 +1,17 @@
+.counter {
+
+    .contadorBotones {
+        @include flex(space-evenly, center);
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 80%;
+        margin: 0 auto 0 auto;
+
+        .contadorBoton {
+            height: 40px;
+            margin: 10px 0 10px 0;
+            width: 35%;
+            @extend %botones;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+/* SASS II */
+
+/* a) maps */
+
+$coloresRedes: (twitter: #55acee,
+    facebook: #3a5795,
+    instagram: #FFDC7D,
+    whatsApp: #25D366);
+
+/* b) extends */
+
+%contenedorNegro {
+    background: $colorNegro;
+    border: solid $colorBlanco;
+    border-radius: 8px;
+    box-shadow: $boxShadowOscura;
+}
+
+%img {
+    display: block;
+    object-fit: cover;
+}
+
+%botones {
+    text-transform: uppercase;
+    margin: 0 3px 0 3px;
+    color: $colorNegro;
+    background-color: $colorPrimario;
+    border: solid 2px $colorBlanco;
+    border-radius: 8px;
+    font-weight: bold;
+
+    &:hover {
+        background-color: $colorNegro;
+        color: $colorPrimario;
+    }
+
+    &:focus {
+        background-color: $colorBlanco;
+        color: $colorNegro;
+    }
+}
+
+%redesDet {
+    border-radius: 50px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
+    border-color: inherit;
+    margin: 0 2px 0 2px;
+}
+
+/* c) mixins */
+
+@mixin flex ($horizontal, $vertical) {
+    display: flex;
+    justify-content: $horizontal;
+    align-items: $vertical;
+}

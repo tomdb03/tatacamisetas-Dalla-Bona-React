@@ -1,8 +1,7 @@
 import './scss/style.scss'
-import { useState } from 'react'
 import Navbar from './components/Navbar';
-import Counter from './components/Counter';
 import ItemListContainer from './components/ItemListContainer';
+import Counter from './components/Counter';
 
 function App() {
   const handleOnAdd = (quantity) => {
@@ -12,7 +11,7 @@ function App() {
   return (
     <div className="App"> 
       <Navbar />
-      <ItemListContainer greeting='Hola comision 34695'/>
+      <ItemListContainer greeting='Catálogo'/>
       <Counter stock={10} onAdd={handleOnAdd}/>
     </div>
   );
