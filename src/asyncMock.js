@@ -5,7 +5,7 @@ const products = [
         price: 1000, 
         category: 'camisetas', 
         img:'images/camisetas/barça.png', 
-        stock: 4, 
+        stock: 0, 
         description:'Camiseta suplente del Barça'
     },
     { id: '2', name: 'Camiseta Newells', price: 800, category: 'camisetas', img:'images/camisetas/nob.jpg', stock: 13, description:'Camiseta titular de Newells'},

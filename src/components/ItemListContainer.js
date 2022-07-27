@@ -16,13 +16,8 @@ const ItemListContainer = ({ greeting }) => {
     return (
         <>
             <h1 className='sectionTitle'>{greeting}</h1>
-            {/* <ul> */}
-                {/* {productsComp} */}
-                {/* {products.map(prod => <li key={prod.id}>{prod.name}</li>)}
-            </ul>         */}
             <ItemList products={products}/>
         </>
-
     )
 }
 
