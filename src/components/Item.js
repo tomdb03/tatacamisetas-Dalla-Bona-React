@@ -9,7 +9,7 @@ const Item = ({product}) => {
             <h3 className='productTitle'>{product.name}</h3>
             <img className='productImage' src={product.img} alt={product.name}/>
             <span className="productTitle productPrice">${product.price}</span>
-            <Counter stock={product.stock} onAdd={onAdd} initial={1} />
+            <Counter stock={product.stock} onAdd={onAdd} initial={product.stock === 0 ? 0 : 1} />
         </li>
     )
 }

@@ -24,20 +24,21 @@ $coloresRedes: (twitter: #55acee,
 %botones {
     text-transform: uppercase;
     margin: 0 3px 0 3px;
-    color: $colorNegro;
-    background-color: $colorPrimario;
-    border: solid 2px $colorBlanco;
-    border-radius: 8px;
+    color: $colorPrimario;
+    border: solid 1px gray;
     font-weight: bold;
+    transition: all 250ms ease-out;
 
     &:hover {
-        background-color: $colorNegro;
-        color: $colorPrimario;
+        background-color: $colorPrimario;
+        color: $colorBlanco;
+        border: none;
     }
 
-    &:focus {
-        background-color: $colorBlanco;
-        color: $colorNegro;
+    &[disabled] {
+        color: gray;
+        background-color: transparent;
+        border: 1px solid gray;
     }
 }
 

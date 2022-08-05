@@ -17,7 +17,6 @@
     grid-auto-rows: auto;
     justify-items: center;
     align-items: center;
-    @extend %contenedorNegro;
 }
 
 .productTitle{
@@ -27,15 +26,25 @@
     font-weight: 1000;
 }
 
+.productPrice{
+    font-size: 2rem;
+    padding: 5px;
+}
+
 .productImage{
     @extend %img;
     height: 230px;
     width: 230px;
-    border: solid 3px $colorBlanco;
-    border-radius: 8px;
+    border: solid 1px $colorBlanco;
+    border-radius: 5px;
     margin: 4px auto 3px auto;
 
     &:hover {
         box-shadow: $boxShadowBlanca;
     }
+}
+
+.cargando{
+    font-size: 2rem;
+    color: $colorPrimario;
 }

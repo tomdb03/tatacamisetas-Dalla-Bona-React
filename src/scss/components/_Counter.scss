@@ -1,8 +1,5 @@
 .counter {
-
     margin: 0 auto 15px auto;
-    // @extend %contenedorNegro;
-    // width: 70%;
 
     .contadorBotones {
         @include flex(space-between, center);
@@ -24,6 +21,7 @@
             color: $colorPrimario;
             font-size: 30px;
             padding: 10px 20% 10px 20%;
+            height: 100%;
             width: 20%;
             @include flex(center, center);
         }
