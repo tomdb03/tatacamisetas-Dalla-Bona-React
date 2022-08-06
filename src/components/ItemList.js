@@ -1,35 +1,23 @@
 import { useState, useEffect } from "react"
+import { getProducts, getProductsByCategory } from '../asyncMock'
+import { useParams } from 'react-router-dom'
 import Item from "./Item"
-import { productList } from "../asyncMock"
+
 
 const ItemList = () => {
   const [products, setProducts] = useState([]);
 
-  const getProducts = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (true) {
-        resolve(productList);
-      } else {
-        // eslint-disable-next-line no-undef
-        reject(error);
-      }
-    }, 2000);
-  });
-
-  const getProductsFromDB = async () => {
-    try {
-      const result = await getProducts;
-      setProducts(result);
-    } catch (error) {
-      console.error(error);
-      alert('No podemos mostrar los productos en este momento');
-    }
-  };
+  const { categoryId } = useParams()
 
   useEffect(() => {
-    getProductsFromDB();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    const asyncFunction = categoryId ? getProductsByCategory : getProducts
+
+    asyncFunction(categoryId).then(productList => {
+      setProducts(productList)
+    }).catch(error => {
+      console.log(error)
+    })
+  }, [categoryId])
 
 
 

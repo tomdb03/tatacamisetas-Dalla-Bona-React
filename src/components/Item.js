@@ -1,4 +1,5 @@
 import Counter from "./Counter";
+import { Link } from 'react-router-dom'
 
 const Item = ({product}) => {
     const onAdd = (qty) => {
@@ -9,6 +10,7 @@ const Item = ({product}) => {
             <h3 className='productTitle'>{product.name}</h3>
             <img className='productImage' src={product.img} alt={product.name}/>
             <span className="productTitle productPrice">${product.price}</span>
+            <Link to={`/detail/${product.id}`} className='detalle'>Ver detalle</Link>
             <Counter stock={product.stock} onAdd={onAdd} initial={product.stock === 0 ? 0 : 1} />
         </li>
     )
