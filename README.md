@@ -9,9 +9,7 @@ $ git clone https://github.com/tomdb03/tatacamisetas-Dalla-Bona-React.git
 $ cd tatacamisetas-Dalla-Bona-React
 $ npm install
 $ npm start
-Environment Variables
-See .env.example for an example.
 
 Built Using
-Create-React-App
-Firebase
+Create-React-App https://create-react-app.dev/
+Firebase https://firebase.google.com/

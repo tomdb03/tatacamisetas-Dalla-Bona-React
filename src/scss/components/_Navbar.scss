@@ -11,7 +11,12 @@
         text-transform: uppercase;
         // font-family: 'Roboto', sans-serif;
         font-weight: bold;
-        
+        text-decoration: none;
+        transition: all 250ms ease-out;
+
+        &:hover{
+            color: $colorNegro;
+        }       
     }
 }
 

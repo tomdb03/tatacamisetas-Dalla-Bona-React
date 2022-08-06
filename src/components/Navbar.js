@@ -9,9 +9,7 @@ function CollapsibleExample() {
         <Navbar collapseOnSelect expand="lg" className='nb'>
             <Container>
                 <Navbar.Brand>
-                    <Link to='/'>
-                        <img className='logo' src='/images/logotatacamisetas.png' alt="logo" />
-                    </Link>
+                    <Link to='/'><img className='logo' src='/images/logotatacamisetas.png' alt="logo" /></Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
