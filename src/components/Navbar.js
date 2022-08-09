@@ -7,7 +7,7 @@ function CollapsibleExample() {
 
     return (
         <Navbar collapseOnSelect expand="lg" className='nb'>
-            <Container className='nbcontainer'>
+            <Container>
                 <Navbar.Brand>
                     <Link to='/'><img className='logo' src='/images/logotatacamisetas.png' alt="logo" /></Link>
                 </Navbar.Brand>

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Item = ({ product }) => {
     const onAdd = (qty) => {
-        product.stock > 0 ? alert(`Has agregado ${qty} unidades de ${product.name}`) : alert(`Lo sentimos, no tenemos stock de ${product.name}`);
-    };
+        alert(`Has agregado ${qty} unidades de ${product.name}`);
+    }
     return (
         <div className='card'>
             <div className="imgBox">

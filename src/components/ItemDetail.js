@@ -1,6 +1,6 @@
 const ItemDetail = ({ description }) => {
     return (
-        <h1>{description}</h1>
+        <h1 className="description">{description}</h1>
     )
 }
 

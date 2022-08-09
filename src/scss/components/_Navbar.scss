@@ -5,23 +5,20 @@
     position: sticky !important;
     z-index: 10;
 
-    .nbcontainer {
+    .links {
+        @include flex(space-evenly, center);
+        width: 100%;
 
-        .links {
-            @include flex(space-evenly, center);
-            width: 100%;
+        .nblink {
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 250ms ease-out;
 
-            .nblink {
-                color: white;
-                font-size: 20px;
-                text-transform: uppercase;
-                font-weight: bold;
-                text-decoration: none;
-                transition: all 250ms ease-out;
-
-                &:hover {
-                    color: $colorNegro;
-                }
+            &:hover {
+                color: $colorNegro;
             }
         }
     }
