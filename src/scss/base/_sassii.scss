@@ -25,13 +25,14 @@ $coloresRedes: (twitter: #55acee,
     text-transform: uppercase;
     margin: 0 3px 0 3px;
     color: $colorPrimario;
+    background-color: white;
     border: solid 1px gray;
     font-weight: bold;
     transition: all 250ms ease-out;
 
     &:hover {
         background-color: $colorPrimario;
-        color: $colorBlanco;
+        color: white;
         border: none;
     }
 

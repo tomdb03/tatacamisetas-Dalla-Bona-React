@@ -7,13 +7,13 @@ function CollapsibleExample() {
 
     return (
         <Navbar collapseOnSelect expand="lg" className='nb'>
-            <Container>
+            <Container className='nbcontainer'>
                 <Navbar.Brand>
                     <Link to='/'><img className='logo' src='/images/logotatacamisetas.png' alt="logo" /></Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
+                <Navbar.Collapse id="responsive-navbar-nav" >
+                    <Nav className="me-auto links">
                         <Link to='/category/camisetas' className="nblink">Camisetas</Link>
                         <Link to='/category/shorts' className="nblink">Shorts</Link>
                         <Link to='/category/buzos' className="nblink">Buzos</Link>

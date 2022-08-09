@@ -26,9 +26,9 @@ See [`.env.example`](https://github.com/szuviria/zuvcommerce/blob/main/.env.exam
 
 ## Rutas
 
-'/' navega a <ItemListContainer.js />, mostrando todos los productos.
-'/category/:categoryId' navega a <ItemListContainer.js />, pero filtrando por categoría.
-'/detail/:productId' navega a <ItemDetailContainer.js />, mostrando el detalle del producto dependiendo del parámetro de URL.
+- '/' navega a <ItemListContainer.js />, mostrando todos los productos.
+- '/category/:categoryId' navega a <ItemListContainer.js />, pero filtrando por categoría.
+- '/detail/:productId' navega a <ItemDetailContainer.js />, mostrando el detalle del producto dependiendo del parámetro de URL.
 
 ## Navegación
 

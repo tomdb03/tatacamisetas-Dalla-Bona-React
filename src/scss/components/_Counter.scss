@@ -1,5 +1,6 @@
 .counter {
-    margin: 0 auto 15px auto;
+    margin-bottom: 15px;
+    width: 100%;
 
     .contadorBotones {
         @include flex(space-between, center);
@@ -7,7 +8,7 @@
         flex-wrap: nowrap;
         width: 80%;
         height: 35px;
-        margin: 0  auto 0 auto;
+        margin: 0 auto 0 auto;
 
         .contadorBoton {
             height: 30px;
@@ -21,12 +22,13 @@
             color: $colorPrimario;
             font-size: 30px;
             padding: 10px 20% 10px 20%;
+            margin-bottom: 0;
             height: 100%;
             width: 20%;
             @include flex(center, center);
         }
     }
-    .contadorBoton {
+    .anadirBoton {
         height: 30px;
         padding: 10px 0 10px 0;
         margin: 4px auto 0 auto;

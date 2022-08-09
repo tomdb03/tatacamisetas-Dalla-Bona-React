@@ -14,7 +14,7 @@ const Counter = ({ onAdd, initial, stock }) => {
                 <h1 className='counterValue'>{count}</h1>
                 <button className='contadorBoton' onClick={() => addProduct(1)} disabled={count === stock || stock === 0}>+</button>
             </div>
-            <button className='contadorBoton' onClick={() => { onAdd(count)}} disabled={stock === 0 ? true : null}>Añadir</button>
+            <button className='anadirBoton' onClick={() => { onAdd(count)}} disabled={stock === 0 ? true : null}>Añadir</button>
         </div>
     )
 }
