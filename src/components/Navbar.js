@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import CartWidget from './CartWidget'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 
 function CollapsibleExample() {
@@ -14,10 +14,10 @@ function CollapsibleExample() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav className="me-auto links">
-                        <Link to='/category/camisetas' className="nblink">Camisetas</Link>
-                        <Link to='/category/shorts' className="nblink">Shorts</Link>
-                        <Link to='/category/buzos' className="nblink">Buzos</Link>
-                        <Link to='/category/joggins' className="nblink">Joggins</Link>
+                        <NavLink to='/category/camisetas' className={({isActive}) => isActive ? 'Activenblink' : 'nblink'}>Camisetas</NavLink>
+                        <NavLink to='/category/shorts' className={({isActive}) => isActive ? 'Activenblink' : 'nblink'}>Shorts</NavLink>
+                        <NavLink to='/category/buzos' className={({isActive}) => isActive ? 'Activenblink' : 'nblink'}>Buzos</NavLink>
+                        <NavLink to='/category/joggins' className={({isActive}) => isActive ? 'Activenblink' : 'nblink'}>Joggins</NavLink>
                     </Nav>
                     <Nav>
                         <Nav.Link className="mx-auto"><CartWidget /></Nav.Link>

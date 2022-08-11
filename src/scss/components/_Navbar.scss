@@ -9,6 +9,15 @@
         @include flex(space-evenly, center);
         width: 100%;
 
+        .Activenblink{
+            color: $colorNegro;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 250ms ease-out;
+        }
+
         .nblink {
             color: white;
             font-size: 20px;
