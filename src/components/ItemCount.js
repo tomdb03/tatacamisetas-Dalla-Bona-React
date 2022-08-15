@@ -1,10 +1,3 @@
-// desabilitar cuando hay 0 productos o desmontarlo directamente
-// vista de lo que hay en el carrito
-// botones remove, clear y create order
-// mostrar suma total y que el carrito está vacío
-// VER CONSIGNA
-
-
 import { useState, useEffect } from 'react'
 
 const ItemCount = ({ onAdd, initial = 1, stock = 0}) => {

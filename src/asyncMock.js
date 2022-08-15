@@ -1,3 +1,5 @@
+// no utilizo esta parte ya que lo tengo en Firebase
+
 export const productList = [
     { 
         id: '1', 
