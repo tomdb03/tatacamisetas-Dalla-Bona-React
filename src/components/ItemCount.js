@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
 
-const ItemCount = ({ onAdd, initial = 1, stock = 0}) => {
+const ItemCount = ({ onAdd, initial = 1, stock = 0 }) => {
     const [quantity, setQuantity] = useState(initial);
 
     useEffect(() => {
         setQuantity(initial)
-   }, [initial])
+    }, [initial])
 
     const addProduct = (num) => {
-            setQuantity(quantity + num)
+        setQuantity(quantity + num)
     }
 
     return (
@@ -18,7 +18,7 @@ const ItemCount = ({ onAdd, initial = 1, stock = 0}) => {
                 <h3 className='counterValue'>{quantity}</h3>
                 <button className='contadorBoton' onClick={() => addProduct(1)} disabled={quantity === stock || stock === 0}>+</button>
             </div>
-            <button className='anadirBoton' onClick={() => { onAdd(quantity)}} disabled={stock === 0 ? true : null}>Añadir</button>
+            <button className='anadirBoton' onClick={() => { onAdd(quantity) }} disabled={stock === 0 ? true : null}>Añadir al carrito</button>
         </div>
     )
 }

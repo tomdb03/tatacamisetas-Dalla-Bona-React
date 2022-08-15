@@ -22,15 +22,16 @@
 .cargando {
     font-size: 2rem;
     color: $colorPrimario;
+    padding: 40px;
+    margin: 0 auto 0 auto;
 }
 
 .card {
-    margin: 0 auto 0 auto;
+    margin: 0 auto 32px auto;
     position: relative;
     width: 270px;
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 20px;
 
     &::before {
         content: "";
