@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, memo } from "react"
 import { getProducts, getProductsByCategory } from '../asyncMock'
 import { useParams } from 'react-router-dom'
 import Item from "./Item"
-
 
 const ItemList = () => {
   const [products, setProducts] = useState([]);
@@ -18,7 +17,6 @@ const ItemList = () => {
       console.log(error)
     })
   }, [categoryId])
-
 
 
   return (
@@ -38,4 +36,4 @@ const ItemList = () => {
   )
 }
 
-export default ItemList
+export default memo(ItemList)

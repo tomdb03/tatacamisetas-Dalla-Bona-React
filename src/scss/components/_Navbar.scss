@@ -10,7 +10,7 @@
         width: 100%;
 
         .Activenblink{
-            color: $colorNegro;
+            color: $colorBlanco;
             font-size: 20px;
             text-transform: uppercase;
             font-weight: bold;
@@ -27,7 +27,7 @@
             transition: all 250ms ease-out;
 
             &:hover {
-                color: $colorNegro;
+                color: $colorBlanco;
             }
         }
     }
