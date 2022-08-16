@@ -1,3 +1,4 @@
+import { Spinner } from 'react-bootstrap'
 import { useState, useEffect, memo } from "react"
 import { useParams } from 'react-router-dom'
 import Item from "./Item"
@@ -27,11 +28,15 @@ const ItemList = () => {
     }).finally(() => {
       setLoading(false)
     })
-    
+
   }, [categoryId])
 
   if (loading) {
-    return <h1 className="cargando">Cargando productos...</h1>
+    return (
+      <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </Spinner>
+    );
   }
 
   return (

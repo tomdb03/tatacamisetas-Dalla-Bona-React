@@ -1,3 +1,4 @@
+import { Spinner } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 // import { getProductById } from '../asyncMock'
 import ItemDetail from './ItemDetail'
@@ -26,7 +27,15 @@ const ItemDetailContainer = () => {
     return (
         <div>
             <h1 className='sectionTitle'>Detalle</h1>
-            {loading ? <h1 className='cargando'>Cargando...</h1> : <ItemDetail {...product} />}
+            {loading ?
+                <Spinner animation="border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner>
+                : <ItemDetail {...product} />}
+            <div className="txtFooter">
+                <p>Creado por <span className="negrita">Tom&aacute;s Dalla Bona</span>. Estudiante de <a className="linkCoder"
+                    href="https://www.coderhouse.com/">Coderhouse</a>.</p>
+            </div>
         </div>
     )
 }

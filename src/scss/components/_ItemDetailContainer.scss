@@ -1,24 +1,27 @@
 .detailCard {
     margin: 40px auto 0 auto;
+    padding: 40px 20px 40px 20px;
     position: relative;
     width: 80%;
     border-radius: 20px;
     overflow: hidden;
+    display: flex;
+    flex-direction: row !important;
 
     &::before {
         content: "";
-        position: absolute;
-        top: -50%;
-        width: 100%;
-        height: 100%;
-        background: $colorPrimario;
-        transform: skewY(345deg);
-        transition: 0.5s;
+        position: none;
+        top: none;
+        width: none;
+        height: none;
+        background: none;
+        transform: none;
+        transition: none;
     }
 
     &:hover::before {
-        top: -60%;
-        transform: skewY(390deg);
+        top: none;
+        transform: none;
     }
 
     &::after {
@@ -27,12 +30,12 @@
 
     .imgBox {
         position: relative;
-        width: 100%;
+        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 20px;
         z-index: 1;
+        padding-top: 0;
 
         .productImage {
             @extend %img;
@@ -42,13 +45,14 @@
     }
 
     .contentBox {
+        width: 50%;
         position: relative;
-        padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         z-index: 2;
+        padding: 0;
 
         .productTitle {
             font-size: 40px;
@@ -64,7 +68,7 @@
                 justify-content: space-around;
                 font-size: 30px;
                 color: $colorPrimario;
-                font-weight: 700;
+                font-weight: 500;
                 letter-spacing: 1px;
                 padding: 5px;
             }
