@@ -4,55 +4,92 @@
 
     .prodIndividual {
         display: flex;
+        align-items: center;
         padding: 10px 0;
         height: 50px;
         border-bottom: 1px solid $colorGris;
         transition: all 0.5s;
-        font-weight: 700;
-        cursor: default;
+
+        .prodName {
+            width: 30%;
+        }
+
+        .noName {
+            width: calc(70% / 4);
+
+            .remover {
+                height: 30px;
+                margin: 0 auto 0 auto;
+                padding: 9px;
+                @extend %botones;
+                color: white;
+                background-color: red;
+                font-weight: inherit;
+                @include flex(center, center);
+
+                &:hover {
+                    background-color: white;
+                    color: red;
+                }
+            }
+        }
 
         div {
-            margin: 0 5px;
-            width: calc(100% / 5);
             font-size: 18px;
             line-height: 50px;
         }
+    }
 
+    .titulos {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 23px;
+    }
+
+    .carroVacio {
+        margin: 100px;
+        color: $colorPrimario;
+        font-size: 40px;
+        font-weight: 700;
     }
 
     .pieCarrito {
         display: flex;
-        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
         margin-top: 55px;
         background-color: $colorPrimario;
-        padding: 35px 0;
+        padding: 35px;
         font-size: 22px;
-        color: $colorBlanco;
+        color: white;
 
-        button {
-            font-size: 12px;
+        .btncart {
+            height: 50px;
+            @extend %botones;
+            @include flex(center, center);
+            padding: 9px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            &:hover{
+                border: solid 1px $colorGris;
+            }
         }
 
-        a {
-            color: $colorPrimario;
+        .volver {
             text-decoration: none;
-            padding: 3px;
-            font-size: 16px;
-            line-height: 22px;
-            background-color: #aaa;
-            box-shadow: 0 0 20px #000;
-            transition: 0.5s;
+            padding: 25px;
+        }
 
-            &:hover {
-                background-color: #fff;
+        .vaciar{
+            &:hover{
+                background-color: red;
+            }
+        }
+
+        .terminar{
+            &:hover{
+                background-color: green;
             }
         }
     }
-}
-
-.carroVacio {
-    margin: 150px;
-    color: $colorPrimario;
-    font-size: 40px;
-    font-weight: 600;
 }
