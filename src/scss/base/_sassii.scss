@@ -26,7 +26,7 @@ $coloresRedes: (twitter: #55acee,
     margin: 0 3px 0 3px;
     color: $colorPrimario;
     background-color: white;
-    border: solid 1px gray;
+    border: solid 1px $colorGris;
     border-radius: 8px;
     font-weight: bold;
     transition: all 250ms ease-out;
@@ -38,9 +38,9 @@ $coloresRedes: (twitter: #55acee,
     }
 
     &[disabled] {
-        color: gray;
+        color: $colorGris;
         background-color: transparent;
-        border: 1px solid gray;
+        border: 1px solid $colorGris;
     }
 }
 

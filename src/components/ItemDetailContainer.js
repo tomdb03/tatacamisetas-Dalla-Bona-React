@@ -32,10 +32,6 @@ const ItemDetailContainer = () => {
                     <span className="visually-hidden">Loading...</span>
                 </Spinner>
                 : <ItemDetail {...product} />}
-            <div className="txtFooter">
-                <p>Creado por <span className="negrita">Tom&aacute;s Dalla Bona</span>. Estudiante de <a className="linkCoder"
-                    href="https://www.coderhouse.com/">Coderhouse</a>.</p>
-            </div>
         </div>
     )
 }

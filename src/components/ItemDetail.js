@@ -23,6 +23,10 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
     const productQuantity = getProductQuantity(id)
 
+    let cantidad = () => stock === 0 ? 'Sin Stock' : stock > 10 ? 'Hay stock' : 'Quedan pocas';
+    let etq = () => stock > 10 ? 'info muchas' : 'info pocas';
+
+
     return (
         <div className='card detailCard'>
             <div className="imgBox">
@@ -34,6 +38,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                     <span className="info">Categoría: {category}</span>
                     <span className="info">Descripción: {description}</span>
                     <span className="info">Precio: ${price}</span>
+                    <span className={etq()}>{cantidad()}</span>
                 </section>
                 <footer className='ItemFooter'>
                     {

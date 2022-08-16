@@ -55,7 +55,7 @@
         padding: 0;
 
         .productTitle {
-            font-size: 40px;
+            font-size: 35px;
             color: $colorNegro;
             font-weight: 1000;
             text-transform: uppercase;
@@ -113,4 +113,14 @@
         }
 
     }
+}
+
+.muchas {
+    color: green !important;
+    text-transform: uppercase;
+}
+
+.pocas {
+    color: red !important;
+    text-transform: uppercase;
 }

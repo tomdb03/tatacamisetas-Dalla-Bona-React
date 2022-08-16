@@ -6,13 +6,27 @@
     text-decoration: none;
     text-transform: none;
     color: $colorNegro;
-    &:hover{
+    border: none;
+    background-color: $colorPrimario;
+
+    &:hover {
         color: $colorNegro;
     }
-}
 
-.CartImg {
-    margin-right: 7px;
-    width: 50px;
-    height: 50px;
+    .CartImg {
+        margin-right: 7px;
+        width: 50px;
+        height: 50px;
+        transition: 500ms;
+    }
+
+    .CartNumbers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            margin: 0;
+        }
+    }
 }

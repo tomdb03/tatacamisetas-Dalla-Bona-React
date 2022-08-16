@@ -2,7 +2,7 @@
     color: $colorPrimario;
     text-transform: uppercase;
     font-weight: 1000;
-    font-size: 50px;
+    font-size: 45px;
     letter-spacing: 3px;
     text-shadow: 0em 0.01em 0.1em $colorNegro;
     padding-top: 20px;
@@ -108,21 +108,5 @@
             padding: 12px;
             font-size: 10px;
         }
-    }
-}
-
-.txtFooter {
-    padding: 30px 12% 10px 12%;
-    color: $colorGris;
-    font-size: 19px;
-    text-align: center;
-
-    .negrita {
-        font-weight: bold;
-    }
-
-    .linkCoder {
-        color: $colorGris;
-        text-decoration: none;
     }
 }

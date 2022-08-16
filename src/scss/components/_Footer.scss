@@ -1,0 +1,15 @@
+.txtFooter {
+    padding: 30px 12% 10px 12%;
+    color: $colorGris;
+    font-size: 19px;
+    text-align: center;
+    
+    .negrita {
+        font-weight: bold;
+    }
+
+    .linkCoder {
+        color: $colorGris;
+        text-decoration: none;
+    }
+}

@@ -1,9 +1,11 @@
 @import "./base/Globals";
 @import "./base/sassii";
 @import "./components/Navbar";
-@import "./components/CartWidget";
+@import "./components/CartDiv";
 @import "./components/ItemListContainer";
 @import "./components/ItemDetailContainer";
 @import "./components/ItemCount";
 @import "~bootstrap/scss/bootstrap";
+@import "./components/CartWidget";
+@import "./components/Footer";
 @import "./components/mediaQuerys";
