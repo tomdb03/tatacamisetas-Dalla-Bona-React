@@ -29,8 +29,9 @@ const CartDiv = () => {
             </div>)}
             <div className='pieCarrito'>
                 {prodInCart > 0 ? <button onClick={() => clearCart()}>Vaciar carrito</button> : <Link to="/">Volver al catálogo</Link>}
-                <div> Cantidad total de productos: {prodInCart}</div>
-                <div> Total de compra: ${compraTotal}</div>
+                {prodInCart > 0 ? <div> Cantidad total de productos: {prodInCart}</div> : null}
+                {prodInCart > 0 ? <div> Total de compra: ${compraTotal}</div> : null}
+                {prodInCart > 0 ? <button>Terminar compra</button> : null}
             </div>
         </div>
     )
