@@ -17,7 +17,7 @@ function CollapsibleExample() {
                         <NavLink to='/category/camisetas' className={({isActive}) => isActive ? 'Activenblink' : 'nblink'}>Camisetas</NavLink>
                         <NavLink to='/category/shorts' className={({isActive}) => isActive ? 'Activenblink' : 'nblink'}>Shorts</NavLink>
                         <NavLink to='/category/buzos' className={({isActive}) => isActive ? 'Activenblink' : 'nblink'}>Buzos</NavLink>
-                        <NavLink to='/category/joggins' className={({isActive}) => isActive ? 'Activenblink' : 'nblink'}>Joggins</NavLink>
+                        <NavLink to='/category/joggings' className={({isActive}) => isActive ? 'Activenblink' : 'nblink'}>Joggings</NavLink>
                     </Nav>
                     <Nav>
                         <Nav.Link className="mx-auto"><CartWidget /></Nav.Link>

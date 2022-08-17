@@ -15,7 +15,7 @@
 //     { id: '4', name: 'Camiseta Fiorentina', price: 1000, category: 'camisetas', img:'/images/camisetas/fiorentina.jpg', stock: 0, description:'Camiseta titular de la Fiorentina'},
 //     { id: '5', name: 'Buzo Argentina', price: 1400, category: 'buzos', img:'/images/buzos/argentina.jpg', stock: 7, description:'Buzo de la selección argentina'},
 //     { id: '6', name: 'Short Manchester United', price: 500, category: 'shorts', img:'/images/shorts/manu.jpg', stock: 10, description:'Short del Manchester United'},
-//     { id: '7', name: 'Joggin Atlético Madrid', price: 1100, category: 'joggins', img:'/images/joggins/atleticomadrid.jpg', stock: 4, description:'Joggin del Atlético Madrid'}
+//     { id: '7', name: 'Jogging Atlético Madrid', price: 1100, category: 'joggings', img:'/images/joggings/atleticomadrid.jpg', stock: 4, description:'Joggin del Atlético Madrid'}
 // ]
 
 // export const getProducts = () => {

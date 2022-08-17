@@ -72,6 +72,18 @@
                 letter-spacing: 1px;
                 padding: 5px;
             }
+
+            .muchas {
+                color: green !important;
+                text-transform: uppercase;
+                font-weight: 800;
+            }
+
+            .pocas {
+                color: red !important;
+                text-transform: uppercase;
+                font-weight: 800;
+            }
         }
 
         .ItemFooter {
@@ -113,16 +125,4 @@
         }
 
     }
-}
-
-.muchas {
-    color: green !important;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.pocas {
-    color: red !important;
-    text-transform: uppercase;
-    font-weight: bold;
 }

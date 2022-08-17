@@ -23,7 +23,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
     const productQuantity = getProductQuantity(id)
 
-    let cantidad = () => stock === 0 ? 'Sin Stock' : stock > 10 ? 'Hay stock' : 'Quedan pocas';
+    let cantidad = () => stock === 0 ? 'Sin Stock' : stock > 10 ? 'Hay stock' : 'Poco stock';
     let etq = () => stock > 10 ? 'info muchas' : 'info pocas';
 
 

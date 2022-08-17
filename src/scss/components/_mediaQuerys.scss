@@ -6,11 +6,11 @@
 
 @media screen and (max-width: 768px) {
 
-    // .btn-wsp {
-    //     width: 63px;
-    //     height: 63px;
-    //     line-height: 66px;
-    // }
+    .btn-wsp {
+        width: 63px;
+        height: 63px;
+        line-height: 66px;
+    }
 
     .itemList {
         grid-template-columns: 1fr 1fr;
@@ -24,9 +24,9 @@
         grid-template-columns: 1fr;
     }
 
-    // .btn-wsp {
-    //     height: 50px;
-    //     width: 50px;
-    //     line-height: 53px;
-    // }
+    .btn-wsp {
+        height: 50px;
+        width: 50px;
+        line-height: 53px;
+    }
 }
