@@ -1,6 +1,5 @@
 import { Spinner } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
-// import { getProductById } from '../asyncMock'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import { getDoc, doc } from 'firebase/firestore'
@@ -23,6 +22,12 @@ const ItemDetailContainer = () => {
         })
 
     }, [productId])
+
+    if (loading) {
+        return <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+        </Spinner>
+    }
 
     return (
         <div>

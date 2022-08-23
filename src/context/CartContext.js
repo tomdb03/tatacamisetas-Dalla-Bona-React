@@ -48,11 +48,11 @@ export const CartContextProvider = ({ children }) => {
     }
 
     const totalCash = () => {
-        let precioTotal = 0;
+        let accu = 0;
         cart.forEach(prod => {
-            precioTotal += parseInt(prod.price) * prod.quantity
+            accu += parseInt(prod.price) * prod.quantity
         })
-        return precioTotal
+        return accu
     }
 
     const getProductQuantity = (id) => {
