@@ -23,17 +23,11 @@ const ItemDetailContainer = () => {
 
     }, [productId])
 
-    if (loading) {
-        return <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-        </Spinner>
-    }
-
     return (
         <div>
             <h1 className='sectionTitle'>Detalle</h1>
             {loading ?
-                <Spinner animation="border" role="status">
+                <Spinner animation="border" role="status" className='cargando'>
                     <span className="visually-hidden">Loading...</span>
                 </Spinner>
                 : <ItemDetail {...product} />}

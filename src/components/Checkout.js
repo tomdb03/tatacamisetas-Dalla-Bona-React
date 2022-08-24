@@ -68,7 +68,7 @@ const Checkout = () => {
                 setOrderCreated(true)
                 setTimeout(() => {
                     navigate('/')
-                }, 3000)
+                }, 2000)
             } else {
                 console.log('Hay productos que estan fuera de stock')
             }
@@ -84,7 +84,7 @@ const Checkout = () => {
     }
 
     if(orderCreated) {
-        return <h1>La orden fue creada correctamente, sera redirigido al listado de productos en 3 segundos</h1>
+        return <h1>La orden fue creada correctamente, sera redirigido al listado de productos en 2 segundos</h1>
     }
 
     return (

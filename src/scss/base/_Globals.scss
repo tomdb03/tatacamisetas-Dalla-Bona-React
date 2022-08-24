@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-$colorPrimario: #33abb1;        /* no lo uso */
+$colorPrimario: #33abb1;
 $colorBlanco: #e5e5e5;
 $colorNegroHF: #141414;
 $colorNegro: #000;
@@ -24,4 +24,8 @@ $boxShadowBlanca: 0px 1px 4px $colorBlanco;
     line-height: inherit;
     color: inherit;
     background-color: $colorBlanco;
-  }
+}
+
+.cargando {
+    margin-top: 55px;
+}

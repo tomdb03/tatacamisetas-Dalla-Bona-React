@@ -12,17 +12,17 @@ const ItemListContainer = ({ greeting }) => {
     const { data, error, isLoading } = useAsync(getProductsFromFirestore, [categoryId])
 
     if (isLoading) {
-        return <Spinner animation="border" role="status">
+        return <Spinner animation="border" role="status" className='cargando'>
             <span className="visually-hidden">Loading...</span>
         </Spinner>
     }
 
     if (error) {
-        return <h1>Hubo un error</h1>
+        return <h1 className='carroVacio'>Hubo un error</h1>
     }
 
     if (data.length === 0) {
-        return categoryId ? <h1>No hay productos en nuestra categoria {categoryId}</h1> : <h1>No hay productos disponibles</h1>
+        return categoryId ? <h1 className='carroVacio'>No hay productos en nuestra categoría {categoryId}</h1> : <h1 className='carroVacio'>No hay productos disponibles</h1>
     }
 
     return (
