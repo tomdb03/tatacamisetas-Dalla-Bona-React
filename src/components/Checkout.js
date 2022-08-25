@@ -22,7 +22,13 @@ const Checkout = () => {
                     firstName: 'Tomás',
                     lastName: 'Dalla Bona',
                     phone: '123456789',
+                    email: 'tomas@mail.com',
                     address: 'direccion 123'
+                    // firstName: firstName,
+                    // lastName: lastName,
+                    // phone: phone,
+                    // email: email,
+                    // address: address
                 },
                 items: cart,
                 prodInCart,
@@ -79,18 +85,59 @@ const Checkout = () => {
     }
 
     if (isLoading) {
-        return <h1>Se esta generando tu orden...</h1>
+        return <h1 className='aviso'>Se esta generando tu orden...</h1>
     }
 
     if (orderCreated) {
-        return <h1>La orden fue creada correctamente, sera redirigido al listado de productos en 2 segundos</h1>
+        return <h1 className='aviso'>La orden fue creada correctamente, sera redirigido al listado de productos en 2 segundos</h1>
     }
 
     return (
         <>
-            <h1>Checkout</h1>
-            <h2>Formulario</h2>
-            <button className="Option" onClick={createOrder}>Generar Orden</button>
+            <h1 className="sectionTitle">Checkout</h1>
+            <form className="formContainer">
+                <div className="campos">
+                    <label for="firstName">Nombre
+                        <span className="obligatorio">  *</span>
+                    </label>
+                    <input className="inputContacto" type="text" name="firstName" placeholder="Nombre" />
+                </div>
+                <div className="campos">
+                    <label for="lastName">Apellido
+                        <span className="obligatorio">  *</span>
+                    </label>
+                    <input className="inputContacto" type="text" name="lastName" placeholder="Apellido" />
+                </div>
+                <div className="campos">
+                    <label for="phone">Celular
+                    <span className="obligatorio">  *</span>
+                    </label>
+                    <input className="inputContacto" type="number" name="phone" placeholder="Celular" />
+                </div>
+                <div className="campos">
+                    <label for="email">Email
+                        <span className="obligatorio">  *</span>
+                    </label>
+                    <input className="inputContacto" type="email" name="email" placeholder="email@correo.com" />
+                </div>
+                <div className="campos">
+                    <label for="adress">Dirección
+                        <span className="obligatorio">  *</span>
+                    </label>
+                    <input className="inputContacto" type="text" name="adress" placeholder="Dirección" />
+                </div>
+                <div className="terminos">
+                    <input type="checkbox" name="acepta" value="1" />
+                    <p>Aceptar los <a href="*">Términos y Condiciones</a><span className="obligatorio"> *</span></p>
+                </div>
+                <div className="containerBotones">
+                    <input className="botones" type="reset" value="Limpiar" />
+                    <button className="botones terminar" onClick={createOrder}>Generar orden</button>
+                </div>
+                <div className="obl">
+                    <span className="obligatorio"> * </span>Estos campos son obligatorios.
+                </div>
+            </form>
         </>
     )
 }

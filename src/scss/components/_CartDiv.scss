@@ -46,13 +46,6 @@
         font-size: 23px;
     }
 
-    .carroVacio {
-        margin: 100px;
-        color: $colorPrimario;
-        font-size: 40px;
-        font-weight: 700;
-    }
-
     .pieCarrito {
         display: flex;
         align-items: center;
@@ -99,6 +92,7 @@
         div{
             p{
                 text-shadow: 2px 2px 4px #000000;
+                margin-bottom: 0;
             }
         }
     }

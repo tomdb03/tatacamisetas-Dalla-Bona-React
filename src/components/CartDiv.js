@@ -20,7 +20,7 @@ const CartDiv = () => {
                 <div className='noName'>Subtotal</div>
                 <div className='noName'></div>
             </div>
-            {prodInCart === 0 && <div className='carroVacio'>No hay nada en el carrito</div>}
+            {prodInCart === 0 && <div className='aviso'>No hay nada en el carrito</div>}
             {cart.map(prod => <CartItem key={prod.id} {...prod}/>)}
             <div className='pieCarrito'>
                 {prodInCart > 0 ? <button className="btncart vaciar" onClick={() => clearCart()}>Vaciar carrito</button> : <Link className="btncart volver" to="/">Volver al catálogo</Link>}

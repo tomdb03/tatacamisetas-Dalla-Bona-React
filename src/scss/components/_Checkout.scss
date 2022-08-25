@@ -1,0 +1,84 @@
+.formContainer {
+    @include flex(inherit, center);
+    flex-direction: column;
+    padding: 20px;
+    width: 60%;
+    margin: 0px auto 0px auto;
+    @extend %contenedorPrimario;
+
+    .campos {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+
+        label {
+            color: white;
+            font-size: 25px;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .inputContacto {
+            background-color: $colorBlanco;
+            width: 100%;
+            height: 40px;
+            border: solid 2px $colorGris;
+            border-radius: 8px;
+            margin-top: 10px;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .terminos {
+        @include flex(space-around, center);
+        flex-direction: row-reverse;
+        width: 60%;
+        color: $colorBlanco;
+
+        p {
+            margin-bottom: 0;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .containerBotones {
+        @include flex(space-between, center);
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 80%;
+
+        .botones {
+            height: 50px;
+            margin: 10px 0 10px 0;
+            padding: 9px;
+            width: 30%;
+            @extend %botones;
+            @include flex(center, center);
+            font-size: 100%;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+            &:hover {
+                border: solid 1px $colorGris;
+            }
+        }
+
+        .terminar {
+            &:hover {
+                background-color: #25D366;
+            }
+        }
+    }
+
+    .obl {
+        font-size: 15px;
+        color: $colorBlanco;
+    }
+}
+
+.obligatorio {
+    color: $colorNegro;
+    font-size: 20px;
+}

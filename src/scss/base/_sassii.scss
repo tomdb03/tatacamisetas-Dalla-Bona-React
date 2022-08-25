@@ -16,6 +16,13 @@ $coloresRedes: (twitter: #55acee,
     box-shadow: $boxShadowOscura;
 }
 
+%contenedorPrimario {
+    background: $colorPrimario;
+    border: solid $colorBlanco;
+    border-radius: 8px;
+    box-shadow: $boxShadowOscura;
+}
+
 %img {
     display: block;
     object-fit: cover;
