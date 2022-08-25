@@ -4,8 +4,6 @@ Bienvenido a Tata Camisetas. Soy Tomás Dalla Bona.
 
 > Ecommerce.
 
-This product is being built
-
 ## Running Locally
 
 ```bash
@@ -14,10 +12,6 @@ $ cd tatacamisetas-Dalla-Bona-React
 $ npm install
 $ npm start
 ```
-
-## Environment Variables
-
-See [`.env.example`](https://github.com/szuviria/zuvcommerce/blob/main/.env.example) for an example.
 
 ## Built Using
 
@@ -40,3 +34,7 @@ See [`.env.example`](https://github.com/szuviria/zuvcommerce/blob/main/.env.exam
 ## Navegación
 
 ![image](./public/navegacion.gif)
+
+## Test app
+
+- [Deploy](https://tatacamisetas-dalla-bona-react.vercel.app/)

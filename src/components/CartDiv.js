@@ -24,8 +24,8 @@ const CartDiv = () => {
             {cart.map(prod => <CartItem key={prod.id} {...prod}/>)}
             <div className='pieCarrito'>
                 {prodInCart > 0 ? <button className="btncart vaciar" onClick={() => clearCart()}>Vaciar carrito</button> : <Link className="btncart volver" to="/">Volver al catálogo</Link>}
-                {prodInCart > 0 ? <div> Cantidad total de productos: {prodInCart}</div> : null}
-                {prodInCart > 0 ? <div> Total de compra: ${compraTotal}</div> : null}
+                {prodInCart > 0 ? <div><p> Total de productos: </p><p>{prodInCart}</p></div> : null}
+                {prodInCart > 0 ? <div><p> Total de compra: </p><p>${compraTotal}</p></div> : null}
                 {prodInCart > 0 ? <Link to='/checkout' className="btncart terminar">Terminar compra</Link> : null}
             </div>
         </div>

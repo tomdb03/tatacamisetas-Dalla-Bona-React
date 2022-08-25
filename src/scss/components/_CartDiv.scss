@@ -70,7 +70,9 @@
             @include flex(center, center);
             padding: 9px;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            &:hover{
+            font-size: 65%;
+
+            &:hover {
                 border: solid 1px $colorGris;
             }
         }
@@ -80,15 +82,23 @@
             padding: 25px;
         }
 
-        .vaciar{
-            &:hover{
+        .vaciar {
+            &:hover {
                 background-color: red;
             }
         }
 
-        .terminar{
-            &:hover{
-                background-color: green;
+        .terminar {
+            text-decoration: none;
+
+            &:hover {
+                background-color: #25D366;
+            }
+        }
+        
+        div{
+            p{
+                text-shadow: 2px 2px 4px #000000;
             }
         }
     }

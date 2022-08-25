@@ -15,7 +15,6 @@ const CartWidget = () => {
                     <p>{prodInCart}</p>
                     <p>{`$${compraTotal}`}</p>
                 </div>
-
             </Link>
         )
     );
