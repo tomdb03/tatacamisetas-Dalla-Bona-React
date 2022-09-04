@@ -1,8 +1,9 @@
 import { useState, useContext } from "react"
+import { useNavigate } from 'react-router-dom'
 import CartContext from "../context/CartContext"
 import { db } from "../services/firebase"
-import { addDoc, collection, updateDoc, doc, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
-import { useNavigate } from 'react-router-dom'
+import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
+import useForm from '../hooks/useForm';
 
 const Checkout = () => {
     const [isLoading, setIsLoading] = useState(false)
@@ -14,26 +15,24 @@ const Checkout = () => {
     const prodInCart = getQuantity()
     const compraTotal = totalCash()
 
+    const [ formValues, handleInputChange ] = useForm({
+        firstName: '',
+        lastName: '',
+        phone: '',
+        email: '',
+        address: ''
+        });
+        const { firstName, lastName, phone, email, address} = formValues;
+
     const createOrder = async () => {
         setIsLoading(true)
         try {
             const objOrder = {
-                buyer: {
-                    firstName: 'Tomás',
-                    lastName: 'Dalla Bona',
-                    phone: '123456789',
-                    email: 'tomas@mail.com',
-                    address: 'direccion 123'
-                    // firstName: firstName,
-                    // lastName: lastName,
-                    // phone: phone,
-                    // email: email,
-                    // address: address
-                },
+                buyer: formValues,
                 items: cart,
                 prodInCart,
                 compraTotal,
-                date: new Date()
+                date: new Date().toISOString()
             }
 
             const ids = cart.map(prod => prod.id)
@@ -73,7 +72,7 @@ const Checkout = () => {
                 setOrderCreated(true)
                 setTimeout(() => {
                     navigate('/')
-                }, 2000)
+                }, 3000)
             } else {
                 console.log('Hay productos que estan fuera de stock')
             }
@@ -89,7 +88,7 @@ const Checkout = () => {
     }
 
     if (orderCreated) {
-        return <h1 className='aviso'>La orden fue creada correctamente, sera redirigido al listado de productos en 2 segundos</h1>
+        return <h1 className='aviso'>¡La orden fue creada correctamente! Será redirigido al listado de productos en 3 segundos.</h1>
     }
 
     return (
@@ -100,31 +99,31 @@ const Checkout = () => {
                     <label for="firstName">Nombre
                         <span className="obligatorio">  *</span>
                     </label>
-                    <input className="inputContacto" type="text" name="firstName" placeholder="Nombre" />
+                    <input className="inputContacto" type="text" name="firstName" value={firstName} onChange={handleInputChange} placeholder="Nombre" />
                 </div>
                 <div className="campos">
                     <label for="lastName">Apellido
                         <span className="obligatorio">  *</span>
                     </label>
-                    <input className="inputContacto" type="text" name="lastName" placeholder="Apellido" />
+                    <input className="inputContacto" type="text" name="lastName" value={lastName} onChange={handleInputChange} placeholder="Apellido" />
                 </div>
                 <div className="campos">
                     <label for="phone">Celular
                     <span className="obligatorio">  *</span>
                     </label>
-                    <input className="inputContacto" type="number" name="phone" placeholder="Celular" />
+                    <input className="inputContacto" type="number" name="phone" value={phone} onChange={handleInputChange} placeholder="Celular" />
                 </div>
                 <div className="campos">
                     <label for="email">Email
                         <span className="obligatorio">  *</span>
                     </label>
-                    <input className="inputContacto" type="email" name="email" placeholder="email@correo.com" />
+                    <input className="inputContacto" type="email" name="email" value={email} onChange={handleInputChange} placeholder="email@correo.com" />
                 </div>
                 <div className="campos">
-                    <label for="adress">Dirección
+                    <label for="address">Dirección
                         <span className="obligatorio">  *</span>
                     </label>
-                    <input className="inputContacto" type="text" name="adress" placeholder="Dirección" />
+                    <input className="inputContacto" type="text" name="address" value={address} onChange={handleInputChange} placeholder="Dirección" />
                 </div>
                 <div className="terminos">
                     <input type="checkbox" name="acepta" value="1" />
