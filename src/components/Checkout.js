@@ -125,10 +125,10 @@ const Checkout = () => {
                     </label>
                     <input className="inputContacto" type="text" name="address" value={address} onChange={handleInputChange} placeholder="Dirección" />
                 </div>
-                <div className="terminos">
+                {/* <div className="terminos">
                     <input type="checkbox" name="acepta" value="1" />
                     <p>Aceptar los <a href="*">Términos y Condiciones</a><span className="obligatorio"> *</span></p>
-                </div>
+                </div> */}
                 <div className="containerBotones">
                     <input className="botones" type="reset" value="Limpiar" />
                     <button className="botones terminar" onClick={createOrder}>Generar orden</button>
