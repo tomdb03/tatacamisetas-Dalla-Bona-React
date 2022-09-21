@@ -96,45 +96,45 @@ const Checkout = () => {
             <h1 className="sectionTitle">Checkout</h1>
             <form className="formContainer">
                 <div className="campos">
-                    <label for="firstName">Nombre
+                    <label>Nombre
                         <span className="obligatorio">  *</span>
                     </label>
-                    <input className="inputContacto" type="text" name="firstName" value={firstName} onChange={handleInputChange} placeholder="Nombre" />
+                    <input className="inputContacto" type="text" name="firstName" value={firstName} onChange={handleInputChange} placeholder="Nombre" required />
                 </div>
                 <div className="campos">
-                    <label for="lastName">Apellido
+                    <label>Apellido
                         <span className="obligatorio">  *</span>
                     </label>
-                    <input className="inputContacto" type="text" name="lastName" value={lastName} onChange={handleInputChange} placeholder="Apellido" />
+                    <input className="inputContacto" type="text" name="lastName" value={lastName} onChange={handleInputChange} placeholder="Apellido" required />
                 </div>
                 <div className="campos">
-                    <label for="phone">Celular
+                    <label>Celular
                     <span className="obligatorio">  *</span>
                     </label>
-                    <input className="inputContacto" type="number" name="phone" value={phone} onChange={handleInputChange} placeholder="Celular" />
+                    <input className="inputContacto" type="number" name="phone" value={phone} onChange={handleInputChange} placeholder="Celular" required />
                 </div>
                 <div className="campos">
-                    <label for="email">Email
-                        <span className="obligatorio">  *</span>
+                    <label>Email
+                        {/* <span className="obligatorio">  *</span> */}
                     </label>
                     <input className="inputContacto" type="email" name="email" value={email} onChange={handleInputChange} placeholder="email@correo.com" />
                 </div>
                 <div className="campos">
-                    <label for="address">Dirección
+                    <label>Dirección
                         <span className="obligatorio">  *</span>
                     </label>
-                    <input className="inputContacto" type="text" name="address" value={address} onChange={handleInputChange} placeholder="Dirección" />
+                    <input className="inputContacto" type="text" name="address" value={address} onChange={handleInputChange} placeholder="Dirección" required />
                 </div>
-                {/* <div className="terminos">
-                    <input type="checkbox" name="acepta" value="1" />
+                <div className="terminos">
+                    <input type="checkbox" name="acepta" value="1" required />
                     <p>Aceptar los <a href="*">Términos y Condiciones</a><span className="obligatorio"> *</span></p>
-                </div> */}
+                </div>
                 <div className="containerBotones">
                     <input className="botones" type="reset" value="Limpiar" />
-                    <button className="botones terminar" onClick={createOrder}>Generar orden</button>
+                    <input className="botones terminar" type="submit" value="Generar orden" onClick={createOrder} />
                 </div>
                 <div className="obl">
-                    <span className="obligatorio"> * </span>Estos campos son obligatorios.
+                    <span className="obligatorio"> *</span>Estos campos son obligatorios.
                 </div>
             </form>
         </>

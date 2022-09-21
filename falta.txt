@@ -1,0 +1,15 @@
+    Devolución:
+Presentación : En la documentacion habria que hacer mencion de que variables de entorno configurar y quizas tambien como es la estructura de los documentos en firestore.
+Convenciones : Todo correcto.
+Container Patterns : Todo correcto
+Simpleza : Todo correcto
+Navegabilidad : Todo correcto
+NavBar : Seria muy buena practica traer las categorias desde firestore para evitar tener que modificar el codigo en caso de que las categorias cambien, se agreguen o se eliminen. Esto es un problema menos a futuro.
+Catálogo : Todo correcto.
+Detalle : Podria refactorizarse logica de Firestore en su modulo y utilizar el hook que contiene logica de componente reutilizable.
+CartProvider/CartContext : Todo correcto.
+CartWidget : Todo correcto.
+Cart : Podria refactorizarse la logica de Firestore para quitarle responsabilidades al componente.
+
+    Proyecto con nota 10 para guiarme:
+https://github.com/JosineiGrau/Mi-tienda-react
